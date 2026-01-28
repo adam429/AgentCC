@@ -8,6 +8,17 @@ get "/" do
   erb :index
 end
 
+get "/add" do
+  erb :add
+end
+
+post "/add" do
+  @a = params[:a].to_f
+  @b = params[:b].to_f
+  @result = @a + @b
+  erb :add
+end
+
 get "/multiply" do
   erb :multiply
 end

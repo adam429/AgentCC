@@ -6,3 +6,8 @@ set :bind, "0.0.0.0"
 get "/" do
   erb :index
 end
+
+get "/healthz" do
+  status 200
+  "ok"
+end

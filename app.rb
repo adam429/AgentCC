@@ -8,28 +8,6 @@ get "/" do
   erb :index
 end
 
-get "/add" do
-  erb :add
-end
-
-post "/add" do
-  @a = params[:a].to_f
-  @b = params[:b].to_f
-  @result = @a + @b
-  erb :add
-end
-
-get "/multiply" do
-  erb :multiply
-end
-
-post "/multiply" do
-  @a = params[:a].to_f
-  @b = params[:b].to_f
-  @result = @a * @b
-  erb :multiply
-end
-
 get "/healthz" do
   status 200
   "ok"
